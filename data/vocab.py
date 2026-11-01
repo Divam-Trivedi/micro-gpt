@@ -17,10 +17,10 @@ class Solution:
 
     def encode(self, text: str, stoi: Dict[str, int]) -> List[int]:
         # Convert a string to a list of integers using stoi mapping
-        res = [stoi[c] for c in text]
-        return res
+        return [stoi[c] for c in text]
+        # return res
 
     def decode(self, ids: List[int], itos: Dict[int, str]) -> str:
         # Convert a list of integers back to a string using itos mapping
-        res = "".join([itos[i] for i in ids])
-        return res
+        return "".join([itos[i] for i in ids])
+        # return res
