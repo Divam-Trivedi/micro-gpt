@@ -18,9 +18,8 @@ class Solution:
         torch.manual_seed(0)
         X_batches = []
         Y_batches = []
-
-        for i in range(batch_size):
-            index = torch.randint(0, len(data)-context_length, (1,)).item()
+        indices = torch.randint(0, len(data)-context_length, (batch_size,))
+        for index in indices:
             X_batches.append(data[index : index + context_length])
             Y_batches.append(data[index + 1 : index+1+context_length])
         
